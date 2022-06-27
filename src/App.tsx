@@ -1,16 +1,18 @@
-import { ThemeProvider, Button, CssBaseline, AppBar, Toolbar, Typography } from "@mui/material"
+import { ThemeProvider, CssBaseline, AppBar, Toolbar, Typography, IconButton } from "@mui/material"
 import theme from './theme'
+import { DriveEta } from '@mui/icons-material';
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar>
+      <AppBar position="static" enableColorOnDark>
         <Toolbar>
-          <Typography>Full Cycle Delivery</Typography>
+          <IconButton color="inherit" edge="start">
+            <DriveEta />
+          </IconButton>
+          <Typography variant="h6">Full Cycle Delivery</Typography>
         </Toolbar>
       </AppBar>
-      Olá Mundo
-      <Button variant="contained" >Xpto</Button>
     </ThemeProvider>
   );
 }
